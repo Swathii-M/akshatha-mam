@@ -1,9 +1,9 @@
 /* PHOTOS & CAPTIONS */
 const photos = [
-    "photos/mam1.jpg","photos/mam2.jpg","photos/mam3.jpg",
-    "photos/mam4.jpg","photos/mam5.jpg","photos/mam6.jpg",
-    "photos/mam7.jpg","photos/mam8.jpg","photos/mam9.jpg",
-    "photos/mam11.jpg","photos/mam13.jpg"
+    "photo/mam1.jpg","photo/mam2.jpg","photo/mam3.jpg",
+    "photo/mam4.jpg","photo/mam5.jpg","photo/mam6.jpg",
+    "photo/mam7.jpg","photo/mam8.jpg","photo/mam9.jpg",
+    "photo/mam11.jpg","photo/mam13.jpg"
 ];
 
 const captions = [
@@ -13,63 +13,57 @@ const captions = [
     "Encouragement that uplifts 💫","Forever inspiring and unforgettable 🌷"
 ];
 
+
 let index = 0;
 
-/* SLIDESHOW */
 function startSlideshow() {
     document.getElementById("layer1").classList.remove("active");
     document.getElementById("layer2").classList.add("active");
-    showNextPhoto();
+    showNext();
 }
 
-function showNextPhoto() {
+function showNext() {
     if (index < photos.length) {
         const img = document.getElementById("photo");
-        const caption = document.getElementById("caption");
+        const cap = document.getElementById("caption");
 
         img.src = photos[index];
-        caption.textContent = captions[index];
+        cap.textContent = captions[index];
 
         img.classList.remove("active");
-        caption.classList.remove("active");
+        cap.classList.remove("active");
 
         setTimeout(() => {
             img.classList.add("active");
-            caption.classList.add("active");
+            cap.classList.add("active");
         }, 100);
 
         index++;
-        setTimeout(showNextPhoto, 3000);
-
+        setTimeout(showNext, 3000);
     } else {
         document.getElementById("layer2").classList.remove("active");
         document.getElementById("layer3").classList.add("active");
-        document.querySelector(".birthday-header").style.display = "none";
         startTyping();
     }
 }
 
-/* TYPING EFFECT */
-const text = `
-Happy Birthday, Akshatha Mam 🤍
+const text = `Happy Birthday, Akshatha Mam 🤍
 You are not just a teacher, you are a blessing in my life.
 Your care, patience, and love have shaped me more than you’ll ever know.
 In your words I found guidance, in your smile I found comfort,
 and in your presence I found the strength to believe in myself.
 I carry immense respect, gratitude, and pure love for you in my heart.
 May your life be filled with the same warmth and happiness
-that you spread to everyone around you—especially to me. 🌸
-`;
+that you spread to everyone around you—especially to me. 🌸`;
 
-let tIndex = 0;
+let i = 0;
 function startTyping() {
-    const target = document.getElementById("typingText");
-    if (tIndex < text.length) {
-        target.innerHTML += text.charAt(tIndex);
-        tIndex++;
+    const t = document.getElementById("typingText");
+    if (i < text.length) {
+        t.innerHTML += text.charAt(i);
+        i++;
         setTimeout(startTyping, 40);
     } else {
-        // Show signature AFTER typing
         document.getElementById("signature").style.opacity = 1;
     }
 }
