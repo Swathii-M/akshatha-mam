@@ -12,6 +12,18 @@ const captions = [
     "Encouragement that uplifts 💫","Forever inspiring and unforgettable 🌷"
 ];
 
+const photos = [
+    "photos/mam1.jpg",
+    "photos/mam2.jpg",
+    "photos/mam3.jpg"
+];
+
+const captions = [
+    "A beacon of dedication 🌟",
+    "Inspiring every student 📖",
+    "Forever unforgettable 🌷"
+];
+
 let index = 0;
 
 function startSlideshow() {
@@ -28,17 +40,16 @@ function showNext() {
         img.src = photos[index];
         cap.textContent = captions[index];
 
-        img.classList.remove("show");
-        cap.classList.remove("show");
+        img.classList.remove("active");
+        cap.classList.remove("active");
 
         setTimeout(() => {
-            img.classList.add("show");
-            cap.classList.add("show");
+            img.classList.add("active");
+            cap.classList.add("active");
         }, 100);
 
         index++;
         setTimeout(showNext, 3000);
-
     } else {
         document.getElementById("layer2").classList.remove("active");
         document.getElementById("layer3").classList.add("active");
@@ -46,7 +57,6 @@ function showNext() {
     }
 }
 
-/* TYPING */
 const text = `Happy Birthday, Akshatha Mam 🤍
 You are not just a teacher, you are a blessing in my life.
 Your care, patience, and love have shaped me more than you’ll ever know.
