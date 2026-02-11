@@ -1,8 +1,8 @@
 * {
     box-sizing: border-box;
+    font-family: 'Georgia', serif;
     margin: 0;
     padding: 0;
-    font-family: Georgia, serif;
 }
 
 body {
@@ -13,35 +13,40 @@ body {
     background: linear-gradient(180deg, #fdfbfb, #ebedee);
 }
 
-/* CARD */
+/* ✅ RESPONSIVE CARD */
 .universe {
     width: 92vw;
     max-width: 400px;
     height: 88vh;
     max-height: 560px;
+
     background: linear-gradient(135deg, #ffe0f7, #d6c2ff);
-    border-radius: 30px;
+    border: 3px solid #f8c0ff;
+    border-radius: 35px;
     box-shadow: 0 20px 50px rgba(200,0,200,0.2);
     position: relative;
     overflow: hidden;
+    padding-top: 45px;
+
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 /* HEADER */
 .birthday-header {
     position: absolute;
-    top: 15px;
+    top: 10px;
     width: 100%;
     text-align: center;
     font-weight: bold;
     color: #8b008b;
-    font-size: 1.4rem;
+    z-index: 5;
+    font-size: 1.5rem;
 }
 .header-name {
     display: block;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: #b030b0;
 }
 
@@ -61,6 +66,31 @@ body {
 @keyframes floatUp {
     from { transform: translateY(0); opacity: 1; }
     to { transform: translateY(-700px); opacity: 0; }
+}
+
+/* DECOR */
+.decor-top, .decor-bottom {
+    position: absolute;
+    width: 120%;
+    height: 100px;
+    background: radial-gradient(circle, rgba(255,182,193,0.3), transparent);
+}
+.decor-top { top: -50px; }
+.decor-bottom { bottom: -50px; }
+
+/* PARTICLES */
+.particles::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(#caa7ff 1px, transparent 1px);
+    background-size: 22px 22px;
+    opacity: 0.25;
+    animation: move 25s linear infinite;
+}
+@keyframes move {
+    from { background-position: 0 0; }
+    to { background-position: 0 600px; }
 }
 
 /* LAYERS */
@@ -84,7 +114,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     cursor: pointer;
     text-align: center;
 }
@@ -99,69 +129,53 @@ body {
     50% { transform: scale(1.08); }
 }
 
-/* SLIDESHOW FIXED CENTER */
-.slideshow {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-.bg-quote {
-    position: absolute;
-    top: -45px;
-    width: 100%;
-    text-align: center;
-    font-size: 1.2rem;
-    opacity: 0.25;
-}
-
+/* SLIDESHOW */
 .slideshow img {
-    width: 240px;
-    height: 240px;
+    width: 250px;
+    height: 250px;
     border-radius: 20px;
     object-fit: cover;
     box-shadow: 0 12px 30px rgba(0,0,0,0.3);
     opacity: 0;
-    transition: opacity 1s ease;
+    transform: translateY(20px);
+    transition: 1s;
 }
-
 .slideshow img.active {
     opacity: 1;
+    transform: translateY(0);
 }
-
 .slideshow p {
-    margin-top: 12px;
+    margin-top: 10px;
     font-size: 1.1rem;
     font-weight: bold;
-    text-align: center;
-    min-height: 30px;
     opacity: 0;
-    transition: opacity 1s ease;
+    transition: 1s;
 }
+.slideshow p.active { opacity: 1; }
 
-.slideshow p.active {
-    opacity: 1;
+.bg-quote {
+    position: absolute;
+    top: 90px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+    opacity: 0.25;
 }
 
 /* FINAL */
 h1 {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     color: #4b0082;
     text-align: center;
 }
 h1 span { color: #b030b0; }
 
 #typingText {
-    margin-top: 10px;
+    margin-top: 8px;
     font-size: 1rem;
     text-align: center;
     line-height: 1.6;
-    min-height: 160px;
+    min-height: 180px;
 }
 
 .signature {
@@ -169,11 +183,11 @@ h1 span { color: #b030b0; }
     font-size: 1rem;
     color: #b030b0;
     opacity: 0;
-    transition: opacity 1s;
+    transition: 1s;
 }
 
-/* MOBILE ADJUST */
+/* MOBILE TUNING */
 @media (max-width: 480px) {
     .circle { width: 180px; height: 180px; }
-    .slideshow img { width: 210px; height: 210px; }
+    .slideshow img { width: 220px; height: 220px; }
 }
