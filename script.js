@@ -45,10 +45,14 @@ function showNext() {
     }
 }
 
-const text = `Happy Birthday Akshatha Mam 🤍
-You are not just a teacher, you are a blessing.
-Your guidance and care mean everything to me.
-May your life be filled with happiness and love 🌸`;
+const text = `Happy Birthday, Akshatha Mam 🤍
+You are not just a teacher, you are a blessing in my life.
+Your care, patience, and love have shaped me more than you’ll ever know.
+In your words I found guidance, in your smile I found comfort,
+and in your presence I found the strength to believe in myself.
+I carry immense respect, gratitude, and pure love for you in my heart.
+May your life be filled with the same warmth and happiness
+that you spread to everyone around you—especially to me. 🌸`;
 
 let i = 0;
 function startTyping() {
