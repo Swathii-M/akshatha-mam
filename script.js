@@ -1,9 +1,9 @@
 /* PHOTOS & CAPTIONS */
 const photos = [
-    "photos/mam1.jpg","photos/mam2.jpg","photos/mam3.jpg",
-    "photos/mam4.jpg","photos/mam5.jpg","photos/mam6.jpg",
-    "photos/mam7.jpg","photos/mam8.jpg","photos/mam9.jpg",
-    "photos/mam11.jpg","photos/mam13.jpg"
+    "photo/mam1.jpg","photo/mam2.jpg","photo/mam3.jpg",
+    "photo/mam4.jpg","photo/mam5.jpg","photo/mam6.jpg",
+    "photo/mam7.jpg","photo/mam8.jpg","photo/mam9.jpg",
+    "photo/mam11.jpg","photo/mam13.jpg"
 ];
 
 const captions = [
@@ -73,3 +73,4 @@ function startTyping() {
         document.getElementById("signature").style.opacity = 1;
     }
 }
+
