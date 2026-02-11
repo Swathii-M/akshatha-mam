@@ -73,5 +73,3 @@ function startTyping() {
         document.getElementById("signature").style.opacity = 1;
     }
 }
-
-
