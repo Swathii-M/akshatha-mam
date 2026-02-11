@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Akshatha Mam</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;500;700&display=swap');
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+        background: #f8eafc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .card {
+        background: #f3d8f1;
+        border-radius: 20px;
+        padding: 40px;
+        width: 600px;
+        max-width: 90%;
+        text-align: center;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        position: relative;
+        z-index: 2; 
+    }
+
+    .card h1 {
+        font-family: 'Great Vibes', cursive;
+        color: #5b2c6f;
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+
+    .card h2 {
+        font-size: 28px;
+        color: #4a235a;
+        margin-bottom: 20px;
+    }
+
+    .card img {
+        width: 250px;
+        border-radius: 15px;
+        border: 4px solid #f6c1e5;
+        margin-bottom: 25px;
+    }
+
+    .card p {
+        font-size: 16px;
+        color: #4a235a;
+        line-height: 1.6;
+        margin: 10px 0;
+    }
+
+    .card .signature {
+        margin-top: 20px;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    /* Flowers in corners */
+    .flower {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-size: cover;
+        background-position: center;
+        z-index: 3;
+        pointer-events: none;
+    }
+
+    .flower.top-left {
+        top: -20px;
+        left: -20px;
+        background-image: url('https://images.unsplash.com/photo-1504198458649-3128b932f49d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fGZsb3dlcnxlbnwwfHx8fDE2ODY2NDA4MTc&ixlib=rb-4.0.3&q=80&w=200');
+    }
+
+    .flower.top-right {
+        top: -20px;
+        right: -20px;
+        background-image: url('https://images.unsplash.com/photo-1504198458649-3128b932f49d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fGZsb3dlcnxlbnwwfHx8fDE2ODY2NDA4MTc&ixlib=rb-4.0.3&q=80&w=200');
+    }
+
+    .flower.bottom-left {
+        bottom: -20px;
+        left: -20px;
+        background-image: url('https://images.unsplash.com/photo-1504198458649-3128b932f49d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fGZsb3dlcnxlbnwwfHx8fDE2ODY2NDA4MTc&ixlib=rb-4.0.3&q=80&w=200');
+    }
+
+    .flower.bottom-right {
+        bottom: -20px;
+        right: -20px;
+        background-image: url('https://images.unsplash.com/photo-1504198458649-3128b932f49d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fGZsb3dlcnxlbnwwfHx8fDE2ODY2NDA4MTc&ixlib=rb-4.0.3&q=80&w=200');
+    }
+
+    /* Sparkle effect */
+    .sparkle {
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        background: #fff;
+        border-radius: 50%;
+        box-shadow: 0 0 10px #fff;
+        animation: sparkle 2s infinite;
+    }
+
+    @keyframes sparkle {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(2); opacity: 0.5; }
+    }
+</style>
+</head>
+<body>
+
+<div class="flower top-left"></div>
+<div class="flower top-right"></div>
+<div class="flower bottom-left"></div>
+<div class="flower bottom-right"></div>
+
+<div class="card">
+    <h1>🎉 Happy Birthday 🎉</h1>
+    <h2>Akshatha Mam 🌷</h2>
+    <img src="/photos/mam1.jpg" alt="Akshatha Mam">
+
+    <p>Happy Birthday, Akshatha Mam 💖</p>
+    <p>You are not just a teacher, you are a blessing in my life.<br>
+    Your care, patience, and love have shaped me more than you’ll ever know.</p>
+
+    <p>In your words I found guidance,<br>
+    in your smile I found comfort,<br>
+    and in your presence I found the strength to believe in myself.</p>
+
+    <p>I carry immense respect, gratitude, and pure love for you in my heart.<br>
+    May your life be filled with the same warmth and happiness<br>
+    that you spread to everyone around you—especially to me. 🌸</p>
+
+    <p class="signature">With love,<br>Swathi</p>
+</div>
+
+<script>
+    // Sparkles
+    for (let i = 0; i < 30; i++) {
+        let sparkle = document.createElement('div');
+        sparkle.className = 'sparkle';
+        sparkle.style.top = Math.random() * window.innerHeight + 'px';
+        sparkle.style.left = Math.random() * window.innerWidth + 'px';
+        sparkle.style.animationDelay = Math.random() * 2 + 's';
+        document.body.appendChild(sparkle);
+    }
+</script>
+
+</body>
+</html>
