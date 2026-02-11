@@ -2,7 +2,7 @@
 const photos = [
     "photo/mam1.jpg","photo/mam2.jpg","photo/mam3.jpg",
     "photo/mam4.jpg","photo/mam5.jpg","photo/mam6.jpg",
-    "photos/mam7.jpg","photos/mam8.jpg","photo/mam9.jpg",
+    "photo/mam7.jpg","photo/mam8.jpg","photo/mam9.jpg",
     "photo/mam11.jpg","photo/mam13.jpg"
 ];
 
@@ -73,4 +73,5 @@ function startTyping() {
         document.getElementById("signature").style.opacity = 1;
     }
 }
+
 
